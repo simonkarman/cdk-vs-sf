@@ -9,7 +9,7 @@ type Operation = {
 };
 
 const parse = (event: APIGatewayProxyEvent): Operation => {
-  const parsedEvent: object = JSON.parse(event.body!) || {};
+  const parsedEvent = JSON.parse(event.body!) || {};
   return {
     id: (typeof parsedEvent['id'] === 'string') ? parsedEvent['id'] : 'default',
     operator: (parsedEvent['operator'] === 'subtract') ? 'subtract' : 'add',

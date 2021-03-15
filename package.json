@@ -9,7 +9,7 @@
   "author": "Simon Karman",
   "husky": {
     "hooks": {
-      "pre-commit": "npm --prefix serverless-framework test"
+      "pre-commit": "npm --prefix serverless-framework test && npm --prefix cdk test"
     }
   },
   "dependencies": {},

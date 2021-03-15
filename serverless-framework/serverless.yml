@@ -1,0 +1,40 @@
+service: serverless-example-service
+provider:
+  name: aws
+  region: eu-west-1
+  apiGateway:
+    shouldStartNameWithService: true
+  lambdaHashingVersion: 20201221
+  iamRoleStatements:
+    - Effect: Allow
+      Action:
+        - dynamodb:UpdateItem
+      Resource: !GetAtt CounterTable.Arn
+functions:
+  Calculator:
+    handler: src/calculator.handler
+    runtime: nodejs14.x
+    environment:
+      COUNTER_TABLE: !Ref CounterTable
+    events:
+      - http:
+          path: calculator
+          method: put
+resources:
+  Resources:
+    CounterTable:
+      Type: AWS::DynamoDB::Table
+      Properties:
+        TableName: serverless-example-service-counter-table
+        AttributeDefinitions:
+          - AttributeName: id
+            AttributeType: S
+        KeySchema:
+          - AttributeName: id
+            KeyType: HASH
+        ProvisionedThroughput:
+          ReadCapacityUnits: 1
+          WriteCapacityUnits: 1
+
+plugins:
+  - serverless-plugin-typescript

@@ -14,9 +14,9 @@ My name is [Simon Karman](https://www.simonkarman.nl). I am a professional Softw
 ## Project Outline
 The `cdk/` directory contains the example project written using the AWS CDK and the `serverless-framework/` directory contains the example project written using the Serverless Framework.
 
-The example application provides an HTTP endpoint (`POST /transaction`) that allows you to store transaction details in a database. The solution will be build using an AWS API Gateway for the REST endpoint, a AWS Lambda function to handle the invocation, and a DynamoDB table to store the transaction details.
+The example application provides an HTTP endpoint (`PUT /calculator`) that allows you to execute an add or subtract operation on a counter in a database. The solution will be built using an AWS API Gateway for the REST endpoint, a AWS Lambda function to handle the invocation, and a DynamoDB table to store the counter details.
 
-The source code for the lambdas of both projects have been written in TypeScript. Visit the README.md files in those directories to get more information on how to get started with each solution.
+The source code for the lambdas of both projects have been written in TypeScript. Visit the README files in those directories to get more information on how to run each solution.
 
 > This example application is focussed on using Serverless resources, but both frameworks can also be used to set up the infrastructure of containerized applications using tools such as AWS EC2 or ECS.
 

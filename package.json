@@ -1,0 +1,19 @@
+{
+  "name": "cdk-vs-serverless-framework",
+  "version": "1.0.0",
+  "description": "CDK vs Serverless Framework",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/simonkarman/cdk-vs-serverless-framework.git"
+  },
+  "author": "Simon Karman",
+  "husky": {
+    "hooks": {
+      "pre-commit": "npm --prefix serverless-framework test"
+    }
+  },
+  "dependencies": {},
+  "devDependencies": {
+    "husky": "^4.3.8"
+  }
+}

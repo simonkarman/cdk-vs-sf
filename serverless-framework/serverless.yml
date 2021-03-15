@@ -1,4 +1,4 @@
-service: serverless-example-service
+service: calculator-serverless-framework
 provider:
   name: aws
   region: eu-west-1
@@ -27,7 +27,7 @@ resources:
     CounterTable:
       Type: AWS::DynamoDB::Table
       Properties:
-        TableName: serverless-example-service-counter-table
+        TableName: calculator-serverless-framework-counter-table
         AttributeDefinitions:
           - AttributeName: id
             AttributeType: S

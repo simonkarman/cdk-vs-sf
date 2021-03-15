@@ -13,6 +13,7 @@ $ npm install
 ## Deploying
 Deploy the application to your aws account. The Serverless Framework needs access to your cloud provider account so that it can create and manage resources on your behalf. Take a look at [https://www.serverless.com/framework/docs/providers/aws/guide/credentials/](https://www.serverless.com/framework/docs/providers/aws/guide/credentials/) to setup the AWS CLI with your AWS credentials.
 ```bash
+$ npm run bootstrap
 $ npm run deploy
 ```
 

@@ -1,11 +1,11 @@
-import * as cdk from '@aws-cdk/core';
+import * as core from '@aws-cdk/core';
 import * as lambda from '@aws-cdk/aws-lambda';
 import * as lambdanodejs from '@aws-cdk/aws-lambda-nodejs';
 import * as apigateway from '@aws-cdk/aws-apigateway';
 import * as dynamodb from '@aws-cdk/aws-dynamodb';
 
-export class CdkStack extends cdk.Stack {
-  constructor(scope: cdk.Construct, id: string, props?: cdk.StackProps) {
+export class CdkStack extends core.Stack {
+  constructor(scope: core.Construct, id: string, props?: core.StackProps) {
     super(scope, id, props);
     
     // DynamoDB Table

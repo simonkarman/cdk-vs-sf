@@ -1,15 +1,15 @@
 {
-  "name": "cdk-vs-serverless-framework",
+  "name": "cdk-vs-sf",
   "version": "1.0.0",
   "description": "CDK vs Serverless Framework",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/simonkarman/cdk-vs-serverless-framework.git"
+    "url": "git+https://github.com/simonkarman/cdk-vs-sf.git"
   },
   "author": "Simon Karman",
   "husky": {
     "hooks": {
-      "pre-commit": "npm --prefix serverless-framework test && npm --prefix cdk test"
+      "pre-commit": "npm --prefix cdk test && npm --prefix sf test"
     }
   },
   "dependencies": {},

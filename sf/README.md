@@ -6,7 +6,7 @@ The example project as explained in [REAMDE.md](../README.md) build using the Se
 ## Installing
 Install all dependencies of the project.
 ```bash
-$ cd serverless-framework
+$ cd sf
 $ npm install
 ```
 

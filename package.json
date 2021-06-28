@@ -12,8 +12,12 @@
       "pre-commit": "npm --prefix cdk test && npm --prefix sf test"
     }
   },
-  "dependencies": {},
   "devDependencies": {
+    "@types/node": "^15.12.5",
     "husky": "^4.3.8"
+  },
+  "dependencies": {
+    "@types/lodash": "^4.14.170",
+    "lodash": "^4.17.21"
   }
 }

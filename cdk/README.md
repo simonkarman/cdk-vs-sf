@@ -10,10 +10,15 @@ $ cd cdk
 $ npm install
 ```
 
-## Deploying
-Deploy the application to your aws account. The Serverless Framework needs access to your cloud provider account so that it can create and manage resources on your behalf. Take a look at [https://www.serverless.com/framework/docs/providers/aws/guide/credentials/](https://www.serverless.com/framework/docs/providers/aws/guide/credentials/) to setup the AWS CLI with your AWS credentials.
+## Bootstrapping
+To use the AWS CDK in your AWS account you need to bootstrap CDK, this ensures that the CDK toolkit is available in your AWS account. This includes things like a deployment role and an S3 bucket for resources. More information on bootstrapping can be found here: [https://docs.aws.amazon.com/cdk/latest/guide/bootstrapping.html](https://docs.aws.amazon.com/cdk/latest/guide/bootstrapping.html) 
 ```bash
 $ npm run bootstrap
+```
+
+## Deploying
+Deploy the application to your aws account.
+```bash
 $ npm run deploy
 ```
 
@@ -24,4 +29,4 @@ $ curl -X PUT --data '{"operator":"add","amount":11}' https://abcdefghij.execute
 ```
 
 ## Playground
-You can make changes to play around with the setup of the Serverless Framework. To make changes the infrastruture of the project edit the `lib/cdk-stack.ts` file. To make changes regarding the application code edit the source code in the `src/` directory.
+You can make changes to play around with the setup of the AWS Cloud Development Kit. To make changes to the infrastructure of the project edit the `lib/cdk-stack.ts` file. To make changes regarding the application code edit the source code in the `src/` directory. To apply the changes, simply redeploy the application.

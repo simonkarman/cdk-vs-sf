@@ -16,6 +16,8 @@ Deploy the application to your aws account. The Serverless Framework needs acces
 $ npm run deploy
 ```
 
+> Note that the Serverless Framework generates two CloudFormation files. One `.serverless/cloudformation-template-create-stack.json` file and one `.serverless/cloudformation-template-update-stack.json`. The create stack is deployed first to ensure that an S3 bucket exists where the code of your lambda functions can be stored. The update stack then references to the code stored in the S3 bucket.
+
 ## Invoking
 Invoke the ` PUT /calculator` endpoint using curl. Please replace the `abcdefghij` value with the identifier of your own AWS API Gateway.
 ```bash
@@ -23,4 +25,4 @@ $ curl -X PUT --data '{"operator":"add","amount":11}' https://abcdefghij.execute
 ```
 
 ## Playground
-You can make changes to play around with the setup of the Serverless Framework. To make changes the infrastruture of the project edit the `serverless.yml` file. To make changes regarding the application code edit the source code in the `src/` directory.
+You can make changes to play around with the setup of the Serverless Framework. To make changes the infrastructure of the project edit the `serverless.yml` file. To make changes regarding the application code edit the source code in the `src/` directory. To apply the changes, simply redeploy the application.

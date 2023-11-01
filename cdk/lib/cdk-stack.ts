@@ -7,7 +7,7 @@ import * as dynamodb from '@aws-cdk/aws-dynamodb';
 export class CdkStack extends core.Stack {
   constructor(scope: core.Construct, id: string, props?: core.StackProps) {
     super(scope, id, props);
-    
+
     // DynamoDB Table
     const counterTable = new dynamodb.Table(this, 'CounterTable', {
       partitionKey: {
@@ -21,7 +21,7 @@ export class CdkStack extends core.Stack {
       environment: {
         COUNTER_TABLE: counterTable.tableName,
       },
-      runtime: lambda.Runtime.NODEJS_14_X,
+      runtime: lambda.Runtime.NODEJS_16_X,
       entry: 'src/calculator.ts',
       handler: 'handler',
     });

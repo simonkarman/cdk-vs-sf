@@ -5,7 +5,7 @@ import * as core from '@aws-cdk/core';
 import * as sqs from '@aws-cdk/aws-sqs';
 import * as lambdasources from '@aws-cdk/aws-lambda-event-sources';
 import { KarmanFunction } from './karman-function';
- 
+
 /**
   * The KarmanListenerProps contains all the properties needed to create
   *   the structure.
@@ -20,7 +20,7 @@ export type KarmanListenerProps = {
  *   dead letter queue for a given karman function. It ensures the messages
  *   are retried 3 times (unless overwritten) and that the function is subscribed
  *   to the newly created queue.
- * 
+ *
  * Usage: new KarmanListener(scope, 'ExampleListener', { function: myFunction });
  */
 export class KarmanListener extends core.Construct {
@@ -53,7 +53,7 @@ export class KarmanListener extends core.Construct {
   public static addMonitoringAlarms(dlq: sqs.Queue) {
     /**
      * In a real world scenario this is where you could add alarms to
-     *   your queue so you'll get notified once messages are ending up
+     *   your queue, so you'll get notified once messages are ending up
      *   on your dlq.
      */
   }

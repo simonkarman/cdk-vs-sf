@@ -3,6 +3,8 @@ AWS Cloud Development Kit
 
 The example project as explained in [REAMDE.md](../README.md) build using the AWS Cloud Development Kit (AWS CDK).
 
+> As of June 2023 AWS CDK v1 has reached End-of-Support. This example is not updated, and you should migrate to AWS CDK v2. Within the context of this project, the example code is still relevant.
+
 ## Installing
 Install all dependencies of the project.
 ```bash
@@ -25,7 +27,7 @@ $ npm run deploy
 ## Invoking
 Invoke the ` PUT /calculator` endpoint using curl. Please replace the `abcdefghij` value with the identifier of your own AWS API Gateway.
 ```bash
-$ curl -X PUT --data '{"operator":"add","amount":11}' https://abcdefghij.execute-api.eu-west-1.amazonaws.com/dev/calculator
+$ curl -X PUT --data '{"operator":"add","amount":11}' https://abcdefghij.execute-api.eu-west-1.amazonaws.com/prod/calculator
 ```
 
 ## Playground

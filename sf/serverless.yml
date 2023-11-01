@@ -15,7 +15,7 @@ provider:
 functions:
   Calculator:
     handler: src/calculator.handler
-    runtime: nodejs14.x
+    runtime: nodejs18.x
     environment:
       COUNTER_TABLE: !Ref CounterTable
     events:

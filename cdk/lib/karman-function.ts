@@ -28,7 +28,7 @@ export class KarmanFunction extends lambdanodejs.NodejsFunction {
   constructor(scope: core.Construct, id: string, props?: KarmanFunctionProps) {
     super(scope, id, {
       // Sane defaults that can still be overridden from the props.
-      runtime: lambda.Runtime.NODEJS_16_X,
+      runtime: new lambda.Runtime('nodejs20.x', lambda.RuntimeFamily.NODEJS),
       memorySize: 1024,
 
       // The props passed to this function.

@@ -21,7 +21,7 @@ export class CdkStack extends core.Stack {
       environment: {
         COUNTER_TABLE: counterTable.tableName,
       },
-      runtime: lambda.Runtime.NODEJS_16_X,
+      runtime: new lambda.Runtime('nodejs20.x', lambda.RuntimeFamily.NODEJS),
       entry: 'src/calculator.ts',
       handler: 'handler',
     });
